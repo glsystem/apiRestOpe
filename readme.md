@@ -6,17 +6,72 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# Api REST - OPE
 
-## Official Documentation
+## Sobre
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## Coding conventions
+* Codigo em ingles
+* Comentarios em portugues
+* Versionamento com git flow
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Requisitos
+* PHP >=7.1
+* MySQL 8.0 (`recomendavel`)
 
-## License
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# apiRestOpe
+## Configuração
+```
+cd Pasta do projeto
+composer install
+```
+
+## Execução
+
+```
+cd Pasta do projeto
+composer install
+php -S 127.0.0.1:8000 -t public
+```
+
+A aplicaçao estará disponível em `127.0.0.1:8000`.
+
+## Testes
+```
+Ainda não temos :(
+```
+
+## Documentação
+
+### API
+```
+Ainda não temos :(
+```
+
+O arquivo .env para o docker-compose não existe.
+
+## Criar arquivo .env e configurala dessa forma
+### Configuracoes para instalcao padrao do MySQL, se voce instalou diferente sinto muito ;)
+```
+APP_NAME=Lumen
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+APP_TIMEZONE=UTC
+
+LOG_CHANNEL=stack
+LOG_SLACK_WEBHOOK_URL=
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=`nome do banco`
+DB_USERNAME=`usuario do banco`
+DB_PASSWORD=`senha do banco`
+
+CACHE_DRIVER=file
+QUEUE_CONNECTION=sync
+```
+
