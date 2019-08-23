@@ -29,6 +29,16 @@ $router->group(['prefix' => "/v0/api/endereco"], function () use ($router){
     $router->delete("/{id}", "EnderecoController@destroy");
 });
 
+$router->get("/v0/api/estoque", "EstoqueController@getAll");
+
+$router->group(['prefix' => "/v0/api/estoque"], function () use ($router){
+    $router->get("/{id}", "EstoqueController@get");
+    $router->post("/", "EstoqueController@store");
+    $router->put("/{id}", "EstoqueController@update");
+    $router->delete("/{id}", "EstoqueController@destroy");
+});
+
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });

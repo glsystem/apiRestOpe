@@ -20,5 +20,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Repositories\Endereco\EnderecoRepositoryInterface','App\Repositories\Endereco\EnderecoRepositoryEloquent'
         );
+
+        $this->app->bind(
+            'App\Repositories\Estoque\EstoqueRepositoryInterface','App\Repositories\Estoque\EstoqueRepositoryEloquent'
+        );
     }
 }
