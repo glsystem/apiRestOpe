@@ -18,7 +18,8 @@ class FuncionarioModel extends Model
         'salario',
         'cargo',
         'dtNasc',
-        'dtAdimicao'
+        'dtAdimicao',
+        'senha'
     ];
 
     public $timestamps = false;

@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'App\Repositories\Funcionario\FuncionarioRepositoryInterface','App\Repositories\Funcionario\FuncionarioRepositoryEloquent'
+            'App\Repositories\Funcionario\FuncionarioRepositoryInterface', 'App\Repositories\Funcionario\FuncionarioRepositoryEloquent'
         );
 
         $this->app->bind(
@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(
             'App\Repositories\Estoque\EstoqueRepositoryInterface','App\Repositories\Estoque\EstoqueRepositoryEloquent'
+        );
+
+        $this->app->bind(
+            'App\Repositories\Produto\ProdutoRepositoryInterface','App\Repositories\Produto\ProdutoRepositoryEloquent'
         );
     }
 }
