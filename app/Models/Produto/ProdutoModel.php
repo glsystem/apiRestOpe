@@ -12,10 +12,10 @@ class ProdutoModel extends Model
     protected $table = 'Produto';
 
     protected $fillable = [
-        'ID_Receita',
+        'id_receita',
         'Valor',
-        'ID_Categoria',
-        'ID_Subcategoria'
+        'id_categoria',
+        'id_subcategoria'
     ];
 
     public $timestamps = false;

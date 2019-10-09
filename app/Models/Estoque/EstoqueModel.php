@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class EstoqueModel extends Model
 {
-    protected $table = 'estoque';
+    protected $table = 'Estoque';
 
     protected $fillable = [
         'id_ingrediente',
-        'qtd'
+        'qtde'
     ];
 
     public $timestamps = false;

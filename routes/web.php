@@ -47,6 +47,14 @@ $router->group(['prefix' => "/v0/api/produto"], function () use ($router){
     $router->delete("/{id}", "ProdutoController@destroy");
 });
 
+$router->get("/v0/api/fornecedores", "FornecedorController@getAll");
+
+$router->group(['prefix' => "/v0/api/fornecedores"], function () use ($router){
+    $router->get("/{id}", "FornecedorController@get");
+    $router->post("/", "FornecedorController@store");
+    $router->put("/{id}", "FornecedorController@update");
+    $router->delete("/{id}", "FornecedorController@destroy");
+});
 
 $router->get('/', function () use ($router) {
     return $router->app->version();

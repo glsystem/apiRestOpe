@@ -10,16 +10,15 @@ class FuncionarioModel extends Model
     protected $table = 'funcionario';
 
     protected $fillable = [
-        'idEndereco',
-        'nome',
+        'nome_completo',
+        'dt_nascimento',
         'rg',
         'cpf',
-        'telefone',
+        'id_Cargo',
+        'dt_admissao',
         'salario',
-        'cargo',
-        'dtNasc',
-        'dtAdimicao',
-        'senha'
+        'contato',
+        'id_endereco'
     ];
 
     public $timestamps = false;

@@ -9,11 +9,13 @@ class EnderecoModel extends Model
     protected $table = 'endereco';
 
     protected $fillable = [
-        'cep',
-        'logradouro',
         'cidade',
-        'uf',
-        'numero'
+        'estado',
+        'cep',
+        'endereco',
+        'bairro',
+        'numero',
+        'complemento'
     ];
 
     public $timestamps = false;
