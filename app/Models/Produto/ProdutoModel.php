@@ -9,12 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class ProdutoModel extends Model
 {
 
-    protected $table = 'Produto';
+    protected $table = 'produto';
 
     protected $fillable = [
         'id_receita',
         'Valor',
-        'id_categoria',
         'id_subcategoria'
     ];
 
