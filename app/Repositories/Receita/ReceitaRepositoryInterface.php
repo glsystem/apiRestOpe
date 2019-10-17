@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories\Endereco;
+namespace App\Repositories\Receita;
 
-use App\Models\Endereco\EnderecoModel;
+use App\Models\Receita\ReceitaModel;
 
-interface EnderecoRepositoryInterface
+interface ReceitaRepositoryInterface
 {
-    public function __construct(EnderecoModel $enderecoModel);
+    public function __construct(ReceitaModel $ReceitaModel);
 
     public function getAll();
     public function get($id);

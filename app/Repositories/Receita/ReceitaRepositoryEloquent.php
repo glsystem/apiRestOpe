@@ -1,17 +1,19 @@
 <?php
 
-namespace App\Repositories\Fornecedor;
 
-use App\Models\fornecedores\FornecedoresModel;
+namespace App\Repositories\Receita;
 
-class FornecedorRepositoryEloquent implements FornecedorRepositoryInterface
+
+use App\Models\Receita\ReceitaModel;
+
+class ReceitaRepositoryEloquent implements ReceitaRepositoryInterface
 {
 
     private $model;
 
-    public function __construct(FornecedoresModel $fornecedoresModel)
+    public function __construct(ReceitaModel $ReceitaModel)
     {
-        $this->model = $fornecedoresModel;
+        $this->model = $ReceitaModel;
     }
 
     public function getAll()

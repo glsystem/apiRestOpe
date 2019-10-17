@@ -32,5 +32,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Repositories\Fornecedor\FornecedorRepositoryInterface','App\Repositories\Fornecedor\FornecedorRepositoryEloquent'
         );
+
+        $this->app->bind(
+            'App\Repositories\Receita\ReceitaRepositoryInterface','App\Repositories\Receita\ReceitaRepositoryEloquent'
+        );
     }
 }

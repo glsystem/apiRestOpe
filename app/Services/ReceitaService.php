@@ -3,17 +3,15 @@
 namespace App\Services;
 
 use App\Exceptions\CustomValidationException;
-use App\Models\Endereco\ValidationEndereco;
-use App\Models\Estoque\EstoqueModel;
-use App\Repositories\Endereco\EnderecoRepositoryInterface;
-use App\Repositories\Estoque\EstoqueRepositoryInterface;
+use App\Models\Receita\ValidationReceita;
+use App\Repositories\Receita\ReceitaRepositoryInterface;
 use Illuminate\Support\Facades\Validator;
 
-class EstoqueService
+class ReceitaService
 {
     private $repository;
 
-    public function __construct(EstoqueRepositoryInterface $repository)
+    public function __construct(ReceitaRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }
@@ -30,11 +28,11 @@ class EstoqueService
 
     public function store(array $request)
     {
-//        $validator = Validator::make($request, ValidationEndereco::RULE_ENDERECO);
-//
-//        if ($validator->fails()) {
-//            throw new CustomValidationException('Falha na validação dos dados', [$validator->errors()],0);
-//        }
+       # $validator = Validator::make($request, ValidationReceita::RULE_RECEITA);
+
+        // if ($validator->fails()) {
+        //     throw new CustomValidationException('Falha na validação dos dados', [$validator->errors()],0);
+        // }
         return $this->repository->store($request);
     }
 

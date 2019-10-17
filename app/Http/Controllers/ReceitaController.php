@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\CustomValidationException;
 use App\Models\CustomResponse;
-use App\Services\EnderecoService;
+use App\Services\ReceitaService;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class EnderecoController extends Controller
+class ReceitaController extends Controller
 {
     private $service;
     private $customResponse;
 
-    public function __construct(EnderecoService $enderecoService)
+    public function __construct(ReceitaService $ReceitaService)
     {
-        $this->service = $enderecoService;
+        $this->service = $ReceitaService;
         $this->customResponse = $response = new CustomResponse();
     }
 
