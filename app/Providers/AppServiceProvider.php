@@ -40,5 +40,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Repositories\ItemVenda\ItemVendaRepositoryInterface','App\Repositories\ItemVenda\ItemVendaRepositoryEloquent'
         );
+
+        $this->app->bind(
+            'App\Repositories\Ingrediente\IngredienteRepositoryInterface','App\Repositories\Ingrediente\IngredienteRepositoryEloquent'
+        );
     }
 }
