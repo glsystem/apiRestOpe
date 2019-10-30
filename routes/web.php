@@ -83,6 +83,24 @@ $router->group(['prefix' => "/v0/api/ingrediente"], function () use ($router){
     $router->delete("/{id}", "IngredienteController@destroy");
 });
 
+$router->get("/v0/api/venda", "VendaController@getAll");
+
+$router->group(['prefix' => "/v0/api/venda"], function () use ($router){
+    $router->get("/{id}", "VendaController@get");
+    $router->post("/", "VendaController@store");
+    $router->put("/{id}", "VendaController@update");
+    $router->delete("/{id}", "VendaController@destroy");
+});
+
+$router->get("/v0/api/subcat", "SubCategoriaController@getAll");
+
+$router->group(['prefix' => "/v0/api/subcat"], function () use ($router){
+    $router->get("/{id}", "SubCategoriaController@get");
+    $router->post("/", "SubCategoriaController@store");
+    $router->put("/{id}", "SubCategoriaController@update");
+    $router->delete("/{id}", "SubCategoriaController@destroy");
+});
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
