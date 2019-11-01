@@ -14,7 +14,7 @@ class ProdutoModel extends Model
     protected $fillable = [
         'id_receita',
         'Valor',
-        'id_subcategoria'
+        'id_categoria'
     ];
 
     public $timestamps = false;

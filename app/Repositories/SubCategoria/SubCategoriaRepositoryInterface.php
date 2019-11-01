@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories\SubCategoria;
+namespace App\Repositories\Categoria;
 
-use App\Models\SubCategoria\SubCategoriaModel;
+use App\Models\Categoria\CategoriaModel;
 
-interface SubCategoriaRepositoryInterface
+interface CategoriaRepositoryInterface
 {
-    public function __construct(SubCategoriaModel $subCategoriaModel);
+    public function __construct(CategoriaModel $CategoriaModel);
 
     public function getAll();
     public function get($id);

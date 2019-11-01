@@ -7,16 +7,16 @@ namespace App\Http\Controllers;
 use App\Exceptions\CustomValidationException;
 use App\Models\CustomResponse;
 use App\Services\EnderecoService;
-use App\Services\SubCategoriaService;
+use App\Services\CategoriaService;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class SubCategoriaController extends Controller
+class CategoriaController extends Controller
 {
     private $service;
     private $customResponse;
 
-    public function __construct(SubCategoriaService $service)
+    public function __construct(CategoriaService $service)
     {
         $this->service = $service;
         $this->customResponse = $response = new CustomResponse();

@@ -1,17 +1,17 @@
 <?php
 
 
-namespace App\Models\SubCategoria;
+namespace App\Models\Categoria;
 
 
 use Illuminate\Database\Eloquent\Model;
 
-class SubCategoriaModel extends Model
+class CategoriaModel extends Model
 {
-    protected $table = 'subcategoria';
+    protected $table = 'categoria';
 
     protected $fillable = [
-        'nome_subcategoria',
+        'nome_categoria',
         'Id_categoria'
     ];
 
