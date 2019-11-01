@@ -4,13 +4,13 @@
 namespace App\Services;
 
 
-use App\Repositories\Categoria\CategoriaRepositoryInterface;
+use App\Repositories\SubCategoria\SubCategoriaRepositoryInterface;
 
-class CategoriaService
+class SubCategoriaService
 {
     private $repository;
 
-    public function __construct(CategoriaRepositoryInterface $repository)
+    public function __construct(SubCategoriaRepositoryInterface $repository)
     {
         $this->repository = $repository;
     }

@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Repositories\Categoria;
+namespace App\Repositories\SubCategoria;
 
-use App\Models\Categoria\CategoriaModel;
+use App\Models\SubCategoria\SubCategoriaModel;
 
-class CategoriaRepositoryEloquent implements CategoriaRepositoryInterface
+class SubCategoriaRepositoryEloquent implements SubCategoriaRepositoryInterface
 {
 
     private $model;
 
-    public function __construct(CategoriaModel $CategoriaModel)
+    public function __construct(SubCategoriaModel $subCategoriaModel)
     {
-        $this->model = $CategoriaModel;
+        $this->model = $subCategoriaModel;
     }
 
     public function getAll()
