@@ -45,4 +45,9 @@ class IngredienteService
     {
         return $this->repository->destroy($id);
     }
+
+    public function getIngredientWithName()
+    {
+        return $this->repository->getIngredientWithName();
+    }
 }

@@ -13,4 +13,5 @@ interface IngredienteRepositoryInterface
     public function store(array $request);
     public function update($id, array $request);
     public function destroy($id);
-}
+    public function getIngredientWithName();
+    }

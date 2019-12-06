@@ -3,6 +3,7 @@
 namespace App\Repositories\Ingrediente;
 
 use App\Models\Ingrediente\IngredienteModel;
+use Illuminate\Support\Facades\DB;
 
 class IngredienteRepositoryEloquent implements IngredienteRepositoryInterface
 {
@@ -37,5 +38,13 @@ class IngredienteRepositoryEloquent implements IngredienteRepositoryInterface
     public function destroy($id)
     {
         return $this->model->find($id)->delete();
+    }
+
+    public function getIngredientWithName(){
+        return DB::select("SELECT i.nome_ingrediente, e.qtde, m.tipo_medida FROM Estoque as e
+                                    INNER JOIN ingrediente as i
+                                    ON i.id = e.id_ingrediente
+                                    INNER JOIN medida as m
+                                    oN m.id = i.id_medida");
     }
 }

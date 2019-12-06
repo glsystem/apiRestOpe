@@ -91,4 +91,17 @@ class IngredienteController extends Controller
 
         }
     }
+
+    public function getIngredientWithName()
+    {
+        try {
+
+            return response()->json($this->customResponse->tratativeSucess(true, "", Response::HTTP_OK, null, null, $this->service->getIngredientWithName()), Response::HTTP_CREATED);
+
+        } catch (\Exception $e) {
+
+            return response()->json($this->customResponse->trativeError(false, "Erro ao deletar", Response::HTTP_INTERNAL_SERVER_ERROR, $e->getMessage(), null), Response::HTTP_INTERNAL_SERVER_ERROR);
+
+        }
+    }
 }

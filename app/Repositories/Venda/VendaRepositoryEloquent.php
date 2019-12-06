@@ -3,6 +3,7 @@
 
 namespace App\Repositories\Venda;
 
+use Illuminate\Support\Facades\DB;
 use App\Models\Venda\Venda;
 
 class VendaRepositoryEloquent implements VendaRepositoryInterface
@@ -17,7 +18,12 @@ class VendaRepositoryEloquent implements VendaRepositoryInterface
 
     public function getAll()
     {
-        return $this->model->all();
+
+        return DB::select("SELECT v.id as 'id', v.vlr_final as 'vlr_total', sum(iv.qtde) as 'qtde_items' FROM venda as v
+                            INNER JOIN item_venda as iv
+                            ON iv.id_venda = v.id
+                            GROUP BY v.id");
+
     }
 
     public function get($id)

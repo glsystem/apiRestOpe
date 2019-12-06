@@ -81,6 +81,7 @@ $router->group(['prefix' => "/v0/api/ingrediente"], function () use ($router){
     $router->post("/", "IngredienteController@store");
     $router->put("/{id}", "IngredienteController@update");
     $router->delete("/{id}", "IngredienteController@destroy");
+    $router->get("/IngredientWithName", "IngredienteController@getIngredientWithName");
 });
 
 $router->get("/v0/api/venda", "VendaController@getAll");
